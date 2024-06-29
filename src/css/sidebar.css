@@ -2,12 +2,13 @@
 .sidebar {
     background-color: #FFF;
     height: 100%;
-    width: 300px;
+    width: 310px;
     position: fixed;
     display: flex;
     flex-direction: column;
     left: 0;
     top: 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Header */
@@ -22,9 +23,7 @@
     display: flex;
     flex-direction: column;
     align-items: left;
-    margin-left: 10px;
 }
-
 
 .sidebar .menu img {
     width: 30px;
@@ -33,7 +32,21 @@
 .sidebar .menu .item {
     display: flex;
     align-items: center;
-    margin-bottom: 50px;
+    text-decoration: none;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+}
+
+.sidebar .menu .item-highlight {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(95, 67, 244, 0.2);
+    
 }
 
 .sidebar .menu .item #title {
@@ -43,8 +56,16 @@
     margin-left: 15px;
 }
 
+.sidebar .menu .item-highlight #title {
+    color: #5F43F4;
+    font-size: 20.4px;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
 /* Footer */
 .sidebar .footer {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -55,6 +76,7 @@
     margin-left: 30px;
     display: flex;
     align-items: left;
+    cursor: pointer;
 }
 
 .sidebar .footer .user #user-img {
@@ -68,7 +90,7 @@
     align-self: center;
 }
 
-.sidebar .footer .user #user-arrow-down {
+.sidebar .footer .user #user-arrow {
     width: 20px;
     margin-left: 100px;
     align-self: center;
@@ -81,8 +103,31 @@
     color: 7A7E80;
 }
 
+
+.sidebar .footer .logout {
+    position: absolute;
+    text-align: center;
+    padding: 15px;
+    border: none;
+    color: black;
+    background-color: white;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    top: 58px;
+    left: 25px;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.sidebar .footer .logout:hover {
+    background-color: rgb(216, 216, 216);
+}
+
+
+
 .sidebar .footer #linkedin {
     margin-top: 0px;
     scale: 0.80;
+    z-index: 1;
     
 }
